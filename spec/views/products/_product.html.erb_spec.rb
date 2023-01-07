@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "rendering locals in a partial" do
+RSpec.describe "rendering locals in a partial", type: :view do
   it "displays the product" do
     product = Product.create!(title: "dicer", description: "Hello World 2", price: 10.1)
 
