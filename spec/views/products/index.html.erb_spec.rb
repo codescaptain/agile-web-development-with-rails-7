@@ -8,8 +8,12 @@ RSpec.describe "products/index", type: :view do
     ])
 
     render
-
-    expect(rendered).to match /Hello Title/
-    expect(rendered).to match /Goodbye Title/
+    aggregate_failures do
+      expect(rendered).to match /Hello Title/
+      expect(rendered).to match /Goodbye Title/
+      expect(rendered).to have_link("Show")
+      expect(rendered).to have_link("Edit")
+      expect(rendered).to have_link("Destroy")
+    end
   end
 end

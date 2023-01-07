@@ -26,7 +26,7 @@ RSpec.describe ProductsController, type: :controller do
       end
 
       it 'should redirect to root_path' do
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(store_index_path)
       end
 
       it 'should return 302 HTTP status code' do
