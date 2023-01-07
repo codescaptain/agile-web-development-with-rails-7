@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   def record_not_found(exception)
     flash[:error] = exception.message
-    redirect_to request.referer || root_path
+    redirect_to request.referer || store_index_path
   end
 end
