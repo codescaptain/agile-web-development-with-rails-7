@@ -7,6 +7,5 @@ module VisitedCount
     else
       session[:counter] +=1
     end
-
   end
 end
